@@ -95,7 +95,7 @@ export default {
   },
 
   router: {
-    base: 'hello-nuxt-app',
+    // base: '',
     middleware: ['auth']
   },
 }

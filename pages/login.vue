@@ -1,6 +1,6 @@
 <template>
   <div id="login">
-    Please Login(admin@admin.com/123456)
+    Please Login(admin@admin.com/123456 or a/a)
     <LoginPage />
   </div>
 </template>
