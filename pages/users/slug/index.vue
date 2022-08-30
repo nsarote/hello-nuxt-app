@@ -1,0 +1,29 @@
+<template>
+    <div>
+        <h1>User Index</h1>
+    </div>
+</template>
+
+<script>
+export default {
+    name: 'HelloNuxtAppIndex',
+
+    data() {
+        return {
+            
+        };
+    },
+
+    mounted() {
+        
+    },
+
+    methods: {
+        
+    },
+};
+</script>
+
+<style lang="scss" scoped>
+
+</style>
