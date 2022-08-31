@@ -12,11 +12,11 @@
       </nuxt-link>
     </div>
 
-<br>
-<br>
-<br>
+    <br />
+    <br />
+    <br />
     <hr />
-<br>
+    <br />
     <nuxt-link to="/"><button class="button-3">Back to Home</button></nuxt-link>
   </div>
 </template>
@@ -24,6 +24,8 @@
 <script>
 export default {
   name: 'HelloNuxtAppIndex',
+
+  middleware: 'auth',
 
   async asyncData({ $axios }) {
     const photos = await $axios.$get('https://picsum.photos/v2/list?limit=12')

@@ -7,7 +7,7 @@
 <script>
 export default {
   name: 'HelloNuxtAppAbout',
-  // middleware: 'auth',
+  middleware: 'auth',
 
   async asyncData({ $axios }) {
     try {

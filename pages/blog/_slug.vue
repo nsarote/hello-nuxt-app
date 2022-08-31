@@ -27,6 +27,7 @@
 <script>
 export default {
   name: 'HelloNuxtAppSlug',
+  middleware: 'auth',
   async asyncData({ $content, params }) {
     const article = await $content('articles', params.slug).fetch()
 

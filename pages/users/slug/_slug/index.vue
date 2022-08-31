@@ -10,7 +10,7 @@
 <script>
 export default {
   name: 'UserSlugDetail',
-
+  middleware: 'auth',
   data() {
     return {
       slug: this.$route.params.slug,

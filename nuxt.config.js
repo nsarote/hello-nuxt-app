@@ -100,7 +100,7 @@ export default () => {
         local: {
           endpoints: {
             login: { url: 'login', method: 'post', propertyName: 'data.token' },
-            user: { url: 'me', method: 'get', propertyName: 'data' },
+            user: { url: 'me', method: 'get', propertyName: 'data.user' },
             logout: false,
           },
         },
@@ -112,7 +112,7 @@ export default () => {
 
     router: {
       // base: baseUrl,
-      middleware: ['auth'],
+      // middleware: ['auth'],
     },
   }
 }

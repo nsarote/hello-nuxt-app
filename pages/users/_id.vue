@@ -10,6 +10,8 @@
 <script>
 export default {
   name: 'UserDetail',
+  middleware: 'auth',
+  
   validate({ params }) {
     return ['1','2','3'].includes(params.id);
     // return /^[1-10]+$/.test(params.id) // /^\d+$/.test(params.id)

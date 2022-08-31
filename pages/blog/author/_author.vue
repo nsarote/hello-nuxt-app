@@ -64,6 +64,7 @@
 
 <script>
 export default {
+  middleware: 'auth',
   async asyncData({ $content, params }) {
     console.log("params.author=>",params.author)
     const articles = await $content('articles')

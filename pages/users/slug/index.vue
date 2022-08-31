@@ -1,29 +1,24 @@
 <template>
-    <div>
-        <h1>User Index</h1>
-    </div>
+  <div>
+    <h1>User Index</h1>
+  </div>
 </template>
 
 <script>
 export default {
-    name: 'HelloNuxtAppIndex',
+  name: 'HelloNuxtAppIndex',
 
-    data() {
-        return {
-            
-        };
-    },
+  middleware: 'auth',
 
-    mounted() {
-        
-    },
+  data() {
+    return {}
+  },
 
-    methods: {
-        
-    },
-};
+  mounted() {},
+
+  methods: {},
+}
 </script>
 
 <style lang="scss" scoped>
-
 </style>

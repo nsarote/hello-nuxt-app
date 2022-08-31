@@ -11,6 +11,8 @@
 export default {
   name: 'HelloNuxtAppHelloContent',
 
+  middleware: 'auth',
+
   data() {
     return {}
   },

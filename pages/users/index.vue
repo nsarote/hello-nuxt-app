@@ -20,6 +20,8 @@
 export default {
   name: 'HelloNuxtAppIndex',
 
+  middleware: 'auth',
+  
   data() {
     return {
       users: [
@@ -32,7 +34,7 @@ export default {
 
   head() {
     return {
-      title: 'This is user list index page'
+      title: 'This is user list index page',
     }
   },
 
