@@ -18,6 +18,11 @@ import { mapMutations } from 'vuex'
 
 export default {
   middleware: 'auth',
+  head() {
+    return {
+      title: 'Todo List',
+    }
+  },
   computed: {
     todos() {
       return this.$store.state.todos.list

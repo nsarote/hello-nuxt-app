@@ -8,13 +8,19 @@ export default {
   target: 'static',
   // target: 'server',
 
+  serverMiddleware: [
+    { path: '/api', handler: '~/api/index.js' },
+    { path: '/api', handler: '~/api/auth.js' },
+  ],
+
   // Global page headers: https://go.nuxtjs.dev/config-head
   head: {
-    title: 'hello-nuxt-app',
+    titleTemplate: 'Hello Nuxt.js - %s',
+    title: process.env.npm_package_name || 'hello-nuxt-app',
     meta: [
       { charset: 'utf-8' },
       { name: 'viewport', content: 'width=device-width, initial-scale=1' },
-      { hid: 'description', name: 'description', content: '' },
+      { hid: 'description', name: 'description', content: process.env.npm_package_name || 'hello-nuxt-app' },
       { name: 'format-detection', content: 'telephone=no' },
     ],
     link: [{ rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }],
@@ -76,7 +82,7 @@ export default {
   // Axios module configuration: https://go.nuxtjs.dev/config-axios
   axios: {
     // Workaround to avoid enforcing hard-coded localhost:3000: https://github.com/nuxt-community/axios-module/issues/308
-    baseURL: 'http://localhost:12345/api',
+    baseURL: 'http://localhost:3000/api',
   },
 
   auth: {
@@ -96,6 +102,6 @@ export default {
 
   router: {
     // base: '',
-    middleware: ['auth']
+    middleware: ['auth'],
   },
 }

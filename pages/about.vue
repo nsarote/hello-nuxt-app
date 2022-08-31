@@ -7,9 +7,21 @@
 <script>
 export default {
   name: 'HelloNuxtAppAbout',
-  middleware: 'auth',
+  // middleware: 'auth',
+
+  async asyncData({ $axios }) {
+    const response = await $axios.$get('/hello')
+    return { title: response.title }
+  },
+
   data() {
     return {}
+  },
+
+  head() {
+    return {
+      title: this.title || 'About',
+    }
   },
 
   mounted() {},
