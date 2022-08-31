@@ -15,6 +15,10 @@ const user = {
 }
 const mockToken = 'cd23b64ea3ea4ab24cd7d73cd3c8fa86dcb374cd609a56ca'
 
+app.get('/error', (req, res) => {
+  res.json({ message: 'Exception' })
+})
+
 router.get('/me', (req, res) => {
   // req.headers.authorization // Bearer <TOKEN></TOKEN>
 
@@ -60,5 +64,5 @@ app.listen(12345, () => {
   console.log('Mock API start on port 12345');
 }); */
 
-app.use(router);
-module.exports = app;
+app.use(router)
+module.exports = app

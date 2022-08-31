@@ -20,7 +20,11 @@ export default {
     meta: [
       { charset: 'utf-8' },
       { name: 'viewport', content: 'width=device-width, initial-scale=1' },
-      { hid: 'description', name: 'description', content: process.env.npm_package_name || 'hello-nuxt-app' },
+      {
+        hid: 'description',
+        name: 'description',
+        content: process.env.npm_package_name || 'hello-nuxt-app',
+      },
       { name: 'format-detection', content: 'telephone=no' },
     ],
     link: [{ rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }],
@@ -102,7 +106,19 @@ export default {
   },
 
   router: {
-    // base: '',
+    base: process.env.BASE_URL || '',
     middleware: ['auth'],
+  },
+
+  publicRuntimeConfig: {
+    axios: {
+      browserBaseURL: process.env.BROWSER_BASE_URL,
+    },
+  },
+
+  privateRuntimeConfig: {
+    axios: {
+      baseURL: process.env.BASE_URL,
+    },
   },
 }

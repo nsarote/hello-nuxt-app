@@ -39,7 +39,7 @@ export default {
         this.$store.commit('setLoggedIn', true)
       } catch (error) {
         // console.log(error)
-        this.$router.push('/login')
+        this.$router.push('/error')
       }
     },
   },

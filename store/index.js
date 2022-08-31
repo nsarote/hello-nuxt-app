@@ -8,4 +8,7 @@ export const mutations = {
   increment(state) {
     state.counter++
   },
+  setLoggedIn(state, value) {
+    state.auth.loggedIn = value;
+  }
 }
