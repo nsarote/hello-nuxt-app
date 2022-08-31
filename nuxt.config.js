@@ -2,7 +2,8 @@ export default () => {
 
   const isDev = process.env.NODE_ENV === 'development';
   console.log('NODE_ENV:',process.env.NODE_ENV);
-  const baseUrl = isDev?'/api':'https://nsarote.github.io/hello-nuxt-app/api';
+  //const baseUrl = isDev?'/api':'https://master--jazzy-caramel-f3d380.netlify.app/api';
+  const baseUrl = isDev?'/api':'http://localhost:12345/api';
   console.log('baseUrl:',baseUrl);
 
   return {
