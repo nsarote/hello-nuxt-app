@@ -19,6 +19,10 @@ router.get('/error', (req, res) => {
   res.json({ message: 'Exception' })
 })
 
+router.get('/hello', (req, res) => {
+  res.json({ message: 'Hello from serverMiddleware', title: 'This is title from api hello' });
+});
+
 router.get('/me', (req, res) => {
 
     // req.headers.authorization // Bearer <TOKEN></TOKEN>

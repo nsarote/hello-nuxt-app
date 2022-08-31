@@ -10,8 +10,12 @@ export default {
   // middleware: 'auth',
 
   async asyncData({ $axios }) {
-    const response = await $axios.$get('/hello')
-    return { title: response.title }
+    try {
+      const response = await $axios.$get('/hello')
+      return { title: response.title }
+    } catch (error) {
+      console.log(error)
+    }
   },
 
   data() {
