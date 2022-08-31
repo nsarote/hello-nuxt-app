@@ -2,14 +2,12 @@ export default () => {
 
   const isDev = process.env.NODE_ENV === 'development';
   console.log('NODE_ENV:',process.env.NODE_ENV);
-  const baseUrl = isDev?'':'hello-nuxt-app';
+  const baseUrl = isDev?'/api':'/hello-nuxt-app/api';
   console.log('baseUrl:',baseUrl);
 
   return {
     // Disable server-side rendering: https://go.nuxtjs.dev/ssr-mode
     ssr: true,
-
-    mode: 'universal',
 
     // Target: https://go.nuxtjs.dev/config-target
     target: 'static',
@@ -94,7 +92,7 @@ export default () => {
     axios: {
       // Workaround to avoid enforcing hard-coded localhost:3000: https://github.com/nuxt-community/axios-module/issues/308
       // baseURL: 'http://localhost:12345/api',
-      baseURL: '/api',
+      baseURL: baseUrl,
     },
 
     auth: {
@@ -113,7 +111,7 @@ export default () => {
     },
 
     router: {
-      base: baseUrl,
+      // base: baseUrl,
       middleware: ['auth'],
     },
   }
