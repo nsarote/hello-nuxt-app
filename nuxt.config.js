@@ -2,7 +2,7 @@ export default () => {
 
   const isDev = process.env.NODE_ENV === 'development';
   console.log('NODE_ENV:',process.env.NODE_ENV);
-  const baseUrl = isDev?'/api':'http://localhost:12345/api';
+  const baseUrl = isDev?'/api':'https://nsarote.github.io/hello-nuxt-app/api';
   console.log('baseUrl:',baseUrl);
 
   return {
@@ -10,8 +10,8 @@ export default () => {
     ssr: true,
 
     // Target: https://go.nuxtjs.dev/config-target
-    target: 'static',
-    // target: 'server',
+    // target: 'static',
+    target: 'server',
 
     serverMiddleware: [
       { path: '/api', handler: '~/api/index.js' },
