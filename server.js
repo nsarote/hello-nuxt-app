@@ -15,6 +15,10 @@ const user = {
 };
 const mockToken = 'cd23b64ea3ea4ab24cd7d73cd3c8fa86dcb374cd609a56ca'
 
+router.get('/error', (req, res) => {
+  res.json({ message: 'Exception' })
+})
+
 router.get('/me', (req, res) => {
 
     // req.headers.authorization // Bearer <TOKEN></TOKEN>

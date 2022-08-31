@@ -2,7 +2,7 @@ export default () => {
 
   const isDev = process.env.NODE_ENV === 'development';
   console.log('NODE_ENV:',process.env.NODE_ENV);
-  const baseUrl = isDev?'/api':'/hello-nuxt-app/api';
+  const baseUrl = isDev?'/api':'http://localhost:12345/api';
   console.log('baseUrl:',baseUrl);
 
   return {
