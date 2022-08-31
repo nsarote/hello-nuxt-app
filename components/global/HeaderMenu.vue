@@ -7,7 +7,7 @@
       <li><nuxt-link to="/blogContent">Blog Content</nuxt-link></li>
       <li><nuxt-link to="/photos">Photo Api</nuxt-link></li>
       <li><nuxt-link to="/todoList">Todos(Nuxt Vue)</nuxt-link></li>
-      <li><nuxt-link to="/about">About {{loggedIn}}</nuxt-link></li>
+      <li><nuxt-link to="/about">About</nuxt-link></li>
       <li><button @click="logout">Logout</button></li>
     </ul>
   </div>
