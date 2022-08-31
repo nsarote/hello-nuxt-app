@@ -106,19 +106,7 @@ export default {
   },
 
   router: {
-    base: process.env.BASE_URL || '',
+    base: process.env.BASE_URL,
     middleware: ['auth'],
-  },
-
-  publicRuntimeConfig: {
-    axios: {
-      browserBaseURL: process.env.BROWSER_BASE_URL,
-    },
-  },
-
-  privateRuntimeConfig: {
-    axios: {
-      baseURL: process.env.BASE_URL,
-    },
   },
 }
