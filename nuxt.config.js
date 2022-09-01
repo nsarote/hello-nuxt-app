@@ -1,10 +1,10 @@
 export default () => {
   const isDev = process.env.NODE_ENV === 'development'
   console.log('NODE_ENV:', process.env.NODE_ENV)
-  const baseUrl = isDev?'/api':'https://master--jazzy-caramel-f3d380.netlify.app/api';
-  //const baseUrl = isDev ? '/api' : 'http://localhost:12345/api'
+  //const baseUrl = isDev?'/api':'https://master--jazzy-caramel-f3d380.netlify.app/api';
+  const baseUrl = isDev ? '/api' : 'http://localhost:12345/api'
   console.log('baseUrl:', baseUrl)
-  const isHttps = isDev ? false : true;
+  const isHttps = false; //isDev ? false : true;
   console.log('isHttps:', isHttps)
 
   return {
